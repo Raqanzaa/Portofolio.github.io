@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>skill-icon</title>
+    <link rel="stylesheet" href="./css/ferris.css">
+  </head>
+  <body>
+    <div class="wheel">
+      <!-- <div class="skill-icon"></div>
+      <div class="skill-icon"></div>
+      <div class="skill-icon"></div>
+      <div class="skill-icon"></div>
+      <div class="skill-icon"></div>
+      <div class="skill-icon"></div> -->
+      <div class="skill-icon">
+        <img class="img-icon" src="./images/html.svg" alt="HTML">
+        <div class="skill-text">
+          <h1>50%</h1>
+        </div>
+      </div>
+      <div class="skill-icon">
+        <img class="img-icon" src="./images/css.svg" alt="CSS">
+        <div class="skill-text">
+          <h1>50%</h1>
+        </div>
+      </div>
+      <div class="skill-icon">
+        <img class="img-icon" src="./images/javascript.svg" alt="JavaScript">
+        <div class="skill-text">
+          <h1>50%</h1>
+        </div>
+      </div>
+      <div class="skill-icon">
+        <img class="img-icon" src="./images/figma.svg" alt="Figma">
+        <div class="skill-text">
+          <h1>50%</h1>
+        </div>
+      </div>
+      <div class="skill-icon">
+        <img class="img-icon" src="./images/php.svg" alt="PHP">
+        <div class="skill-text">
+          <h1>50%</h1>
+        </div>
+      </div>
+      <div class="skill-icon">
+        <img class="img-icon" src="./images/laravel.svg" alt="laravel">
+        <div class="skill-text">
+          <h1>50%</h1>
+        </div>
+      </div>
+    </div>
+
+    <script>
+const wheel = document.querySelector('.wheel');
+const skillIcons = document.querySelectorAll('.skill-icon');
+
+skillIcons.forEach(icon => {
+    icon.addEventListener('mouseover', () => {
+        wheel.classList.add('paused');
+        skillIcons.forEach(icon => icon.classList.add('paused'));
+    });
+
+    icon.addEventListener('mouseout', () => {
+        wheel.classList.remove('paused');
+        skillIcons.forEach(icon => icon.classList.remove('paused'));
+    });
+});
+
+    </script>
+  </body>
+</html>
