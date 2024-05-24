@@ -350,7 +350,7 @@ span {
     background: var(--second-bg-color);
 }
 
-/* portofolio section */
+/* Portfolio section */
 .portofolio {
     padding-bottom: 10rem;
 }
@@ -858,6 +858,10 @@ section:nth-child(odd) .animate.scroll,
     html {
         font-size: 55%;
     }
+
+    .portofolio .portofolio-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 991px) {
@@ -947,6 +951,11 @@ section:nth-child(odd) .animate.scroll,
         pointer-events: none;
         background: var(--bg-color);
         opacity: .6;
+    }
+
+    .portofolio .portofolio-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 }
 
