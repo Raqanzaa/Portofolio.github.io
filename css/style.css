@@ -158,7 +158,7 @@ section {
     overflow: hidden;
     width: 20rem; /* Adjust size as needed */
     height: 20rem; /* Adjust size as needed */
-    border-radius: 50%; /* Make it circular */
+    /* border-radius: 50%; Make it circular */
     box-shadow: 0 0 1rem rgba(0, 0, 0, .2);
 }
 
