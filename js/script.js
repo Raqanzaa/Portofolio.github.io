@@ -74,3 +74,4 @@ skillIcons.forEach(icon => {
 //     icon.style.top = `${y}px`;
 // });
 
+
