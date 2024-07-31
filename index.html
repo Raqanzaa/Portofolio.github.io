@@ -382,7 +382,7 @@
         </div>
     </section>
 
-    <!-- contact section design -->
+    <!-- contact section design
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span><span class=" scroll" style="--i:1;"></span></h2>
     
@@ -426,7 +426,32 @@
                 <span class=" scroll" style="--i:9;"></span>
             </div>
         </form>
-    </section>    
+    </section> -->
+    
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span>
+            <span class="scroll" style="--i:1;"></span>
+        </h2>
+    
+        <form id="contact-form" onsubmit="sendMail(); return false;">
+            <div class="input-box">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Full Name" required>
+                <span class=" scroll" style="--i:5;"></span>
+            </div>
+            <div class="input-box">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                <span class=" scroll" style="--i:5;"></span>
+            </div>
+            <div class="input-box">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <span class=" scroll" style="--i:5;"></span>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
 
     <!-- footer design -->
     <footer class="footer">
@@ -443,6 +468,17 @@
         </div>
     </footer>
 
+    
+    <script>
+        function sendMail() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        const mailtoLink = `mailto:ahmadrozaq34@gmail.com?subject=Contact%20Form%20Submission&body=Name:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0AMessage:%20${encodeURIComponent(message)}`;
+        
+        window.location.href = mailtoLink;
+    }
+    </script>
     <script src="js/script.js"></script>
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
@@ -450,7 +486,7 @@
             emailjs.init("service_6jjk8fj");
         })();
     </script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault(); // Mencegah pengiriman formulir default
     
@@ -477,7 +513,7 @@
                 alert('Failed to send message. Please try again later.');
             });
         });
-    </script>    
+    </script>     -->
 
 </body>
 </html>
